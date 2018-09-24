@@ -1,0 +1,145 @@
+=>	mysql (to know )
+=>	mysql -u root -p (to connect with database)
+=>	show databases;
+=>	create database jordan (create a folder in DB)
+=>	USE jordan (to connect with folder)
+=>	 create table salarie (id INT PRIMARY KEY NOT NULL, 
+nom VARCHAR(100), 
+prenom VARCHAR(100), 
+email VARCHAR(225), 
+date_naissance DATE, 
+adresse VARCHAR(255), 
+ville VARCHAR(255), 
+code_postal VARCHAR(5), 
+salaire FLOAT);
+
+=>	INSERT INTO salarie VALUES ('',
+'diarra', 
+'abdoulaye', 
+'abdoulaye@lepoles.com', 
+'1999-04-09', 
+'11 allersaint', 
+'vil', 
+'92700', 
+1500.00);
+
+(put data of worker in salarie)
+=>	INSERT INTO nom_de_table VALUES ("value", "value", "value", "value", "value"); 1st way
+=>	INSERT INTO nom_de_table (nom-de colonne) VALUES ("value"); 2nd way
+=>	INSERT INTO nom_de_table (nom, prenom, email) VALUES ("value", "value", "value"); 3nd way
+
+=>	SELECT * FROM salarie; 
+(to see all the table)
+
+=>	DELETE FROM salarie WHERE id=4; 
+=>	TRUNCATE nom_de_table WHERE conditation
+(delete an id)
+
+=>	UPDATE salarie SET date_naissance='1954-12-09' WHERE id=5;
+=>	UPDATE salarie SET nom='Raj', prenom='Barua', date_naissance='1987-03-26' WHERE id=2;
+(how to update your data)
+
+=>	ALTER TABLE salarie ADD telephone INT (10);
+=>	ALTER TABLE salarie MODIFY telephone VARCHAR(25);
+
+
+=>	SELECT * FROM salarie WHERE date_naissance BETWEEN '1960-01-01' AND '2000-01-01';
+=>	SELECT * FROM salarie WHERE date_naissance NOT BETWEEN '1960-01-01' AND '2000-01-01';
+
+=> 	SELECT DISTINCT nom_colonne FROM nom-de_la_table
+
+=>	SELECT adresse, SUM(salaire) FROM salarie GROUP BY adresse;
+
+=>	SELECT * FROM salarie WHERE prenom IN ('s', 'maud');
+=>	SELECT * FROM salarie WHERE prenom IN ('Barua', 'maud');
+(search the maching name)
+
+
+=>	SELECT * FROM salarie LIMIT 2;
+=>	SELECT * FROM salarie LIMIT 1, 2;
+
+
+=>	SELECT * FROM salarie WHERE nom LIKE '%a';
+=>	SELECT * FROM salarie WHERE nom LIKE 'a%';
+=>	SELECT * FROM salarie WHERE nom LIKE '%u%';
+=>	SELECT * FROM salarie WHERE nom LIKE 'a%a';
+(find by craecter)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Abdulhai:
+
+=>	=
+
+Égale
+
+<>
+
+Pas égale
+
+!=
+
+Pas égale
+
+
+
+Supérieur à
+
+<
+
+Inférieur à
+
+
+
+  =
+
+
+
+Supérieur ou égale à
+
+<=
+
+Inférieur ou égale à
+
+IN
+
+Liste de plusieurs valeurs possibles
+
+BETWEEN
+
+Valeur comprise dans un intervalle donnée (utile pour les nombres ou dates)
+
+LIKE
+
+Recherche en spécifiant le début, milieu ou fin d'un mot.
+
+IS NULL
+
+Valeur est nulle
+
+IS NOT NULL
+
+Valeur n'est pas nulle
+=>	AVG() pour calculer la moyenne d’un set de valeur. Permet de connaître le prix du panier moyen pour de chaque client
+
+COUNT() pour compter le nombre de lignes concernées. Permet de savoir combien d’achats a été effectué par chaque client
+
+MAX() pour récupérer la plus haute valeur. Pratique pour savoir l’achat le plus cher
+
+MIN() pour récupérer la plus petite valeur. Utile par exemple pour connaître la date du premier achat d’un client
+
+SUM() pour calculer la somme de plusieurs lignes. Permet par exemple de connaître le total de tous les achats d’un client
